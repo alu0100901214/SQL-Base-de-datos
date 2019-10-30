@@ -1,0 +1,40 @@
+#! /usr/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x8bff40 .scope module, "fa" "fa" 2 2;
+ .timescale 0 0;
+L_0x8f2360 .functor OR 1, L_0x8f2300, C4<0>, C4<0>, C4<0>;
+v0x8f19c0_0 .net "a", 0 0, C4<z>; 0 drivers
+v0x8f1a70_0 .net "b", 0 0, C4<z>; 0 drivers
+v0x8f1b20_0 .net "c_in", 0 0, C4<z>; 0 drivers
+v0x8f1bd0_0 .net "c_out", 0 0, C4<z>; 0 drivers
+RS_0x7ff0994b7138 .resolv tri, L_0x8f20c0, L_0x8f2360, C4<z>, C4<z>;
+v0x8f1c80_0 .net8 "carry1", 0 0, RS_0x7ff0994b7138; 2 drivers
+v0x8f1d30_0 .net "carry2", 0 0, L_0x8f2300; 1 drivers
+v0x8f1df0_0 .net "sum", 0 0, L_0x8f2170; 1 drivers
+v0x8f1ea0_0 .net "sum_out_1", 0 0, L_0x8f1fc0; 1 drivers
+S_0x8f15f0 .scope module, "semisumador1" "ha_v1" 2 6, 3 3, S_0x8bff40;
+ .timescale 0 0;
+L_0x8f1fc0 .functor XOR 1, C4<z>, C4<z>, C4<0>, C4<0>;
+L_0x8f20c0 .functor AND 1, C4<z>, C4<z>, C4<1>, C4<1>;
+v0x8f16e0_0 .alias "a", 0 0, v0x8f19c0_0;
+v0x8f17a0_0 .alias "b", 0 0, v0x8f1a70_0;
+v0x8f1840_0 .alias "carry", 0 0, v0x8f1c80_0;
+v0x8f18e0_0 .alias "sum", 0 0, v0x8f1ea0_0;
+S_0x8ad690 .scope module, "semisumador2" "ha_v1" 2 7, 3 3, S_0x8bff40;
+ .timescale 0 0;
+L_0x8f2170 .functor XOR 1, C4<z>, L_0x8f1fc0, C4<0>, C4<0>;
+L_0x8f2300 .functor AND 1, C4<z>, L_0x8f1fc0, C4<1>, C4<1>;
+v0x8c0030_0 .alias "a", 0 0, v0x8f1b20_0;
+v0x8f1400_0 .alias "b", 0 0, v0x8f1ea0_0;
+v0x8f14a0_0 .alias "carry", 0 0, v0x8f1d30_0;
+v0x8f1540_0 .alias "sum", 0 0, v0x8f1df0_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "fa_v1.v";
+    "ha_v1.v";

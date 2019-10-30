@@ -1,0 +1,44 @@
+<html>
+<head>
+  <title>
+  Informacion de mi sistema para cc1433
+  </title>
+</head>
+
+<body>
+  <h1>Informacion de mi sistema para cc1433</h1>
+  <p>Actualizada el 15/11/16 03:14:21  WET por alu0100901214</p>
+  <h2>Informacion de la versión del sistema</h2>
+<p>Funcion no implementada</p>
+  <h2>Tiempo de encendido del sistema</h2>
+<pre>
+ 15:14:21 up 27 min,  2 users,  load average: 0,45, 0,29, 0,31
+</pre>
+  <h2>Espacio en el sistema de archivos</h2>
+<pre>
+S.ficheros                         bloques de 1K    Usados Disponibles Uso% Montado en
+udev                                     1009752         4     1009748   1% /dev
+tmpfs                                     204976      1064      203912   1% /run
+/dev/sda5                              116688748  30518980    80219064  28% /
+none                                           4         0           4   0% /sys/fs/cgroup
+none                                        5120         0        5120   0% /run/lock
+none                                     1024864       152     1024712   1% /run/shm
+none                                      102400        60      102340   1% /run/user
+rala:/scratch                           41698368    182496    39397696   1% /scratch
+rala:/export/ubuntu14.04              1797470944 596044000  1108647968  35% /soft
+//siga01.stic.ull.es/alu0100901214    1056763060 451522660   551553312  46% /home/siga01.stic.ull.es/de/alu0100901214/datos/Disco_Duro_Virtual
+</pre>
+  <h2>Espacio en directorio personal por usuario</h2>
+<pre>
+Bytes Directorio
+102572	/home/siga01.stic.ull.es/de/alu0100901214
+</pre>
+DIRECTORIOS	ARCHIVOS	EJECUTABLES	NO EJECUTABLES	USADO	DIRECTORIO
+591	16	5	11	102572	/home/siga01.stic.ull.es/de/alu0100901214
+  <h2> Numero de archivos abiertos</h2>
+<pre>
+USUARIO NUMERO ARCHIVOS
+alu0100901214 5455
+</pre>
+</body>
+</html>
